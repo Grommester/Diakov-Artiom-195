@@ -24,6 +24,10 @@ class Program
         {
             Console.WriteLine("Возникло исключение!");
         }
+        finally
+        {
+            Console.WriteLine("Блок finally");
+        }
         Cnsole.WriteLine("Конец программы");
         Console.Read();
     }
