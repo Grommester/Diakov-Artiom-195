@@ -22,5 +22,11 @@ namespace ClassLibraryPassword
                 return false;
             return true;
         }
+            static void Main(string[] args)
+            {
+                string password = "fgih";
+                bool actual = ClassChecker.validatePassword(password);
+                Console.WriteLine('res ' + actual);
+            }
     }
 }
