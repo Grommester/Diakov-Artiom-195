@@ -69,7 +69,7 @@ namespace ClassLibraryPassword.Tests
             Assert.IsFalse(actual);
         }
         [TestMethod()]
-        public void Check_HasUpperLowerCase_ReturnsTrue()
+        public void Check_HasUpperCase_ReturnsTrue()
         {
             string password = "Mful1-pooL";
             bool expected = true;
@@ -77,9 +77,26 @@ namespace ClassLibraryPassword.Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        public void Check_HasUpperLowerCase_ReturnsFalse()
+        public void Check_HasUpperCase_ReturnsFalse()
         {
             string password = "atruiportok";
+            bool expected = false;
+            bool actual = ClassChecker.validatePassword(password);
+            Assert.IsFalse(actual);
+
+        }
+        [TestMethod()]
+        public void Check_HasLowerCase_ReturnsTrue()
+        {
+            string password = "Mful1-pooL";
+            bool expected = true;
+            bool actual = ClassChecker.validatePassword(password);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod()]
+        public void Check_HasLowerCase_ReturnsFalse()
+        {
+            string password = "FAFUYFAUYF";
             bool expected = false;
             bool actual = ClassChecker.validatePassword(password);
             Assert.IsFalse(actual);
