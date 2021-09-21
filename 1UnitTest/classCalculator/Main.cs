@@ -1,75 +1,77 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace calculate
+namespace calculator
 {
-    class Program
+    public class CalculatorChecker
     {
-        static void Main(string[] args)
+        public static double ValidateCalculator(double a, double b, string oper)
         {
-            Console.WriteLine("Hello World!");
-            double a;
-            double b;
-            double total;
-            char oper;
+            if (oper == "+")
+            {
+                return (a + b);
+            }
 
-            Console.WriteLine("Введите первое число:");
-            a = Convert.ToDouble(Console.ReadLine());
+            if (oper == "-")
+            {
+                return a - b;
 
-            Console.WriteLine("Введите оператор:");
-            oper = Convert.ToChar(Console.ReadLine());
+            }
+            if (oper == "*")
+            {
+                return (a * b);
 
-            Console.WriteLine("Введите второе число:");
-            b = Convert.ToDouble(Console.ReadLine());
-           
+            }
+            if (oper == "/")
+            {
+                if (b == 0.0D)
+                {
+                    throw new DivideByZeroException();
 
 
-                        if (oper == '+')
-                        {
-                            total = a + b;
-                            Console.WriteLine("Cумма " + a + " и " + b + " равна " + total);
-                            total return;
-                        }
-
-                        else if (oper == '-')
-                        {
-                            total = a - b;
-                            Console.WriteLine("Разность " + a + " и " + b + " равна " + total);
-                            total return;
-                        }
-
-                        else if (oper == '*')
-                        {
-                            total = a * b;
-                            Console.WriteLine("Умножение " + a + " на " + b + " равно " + total);
-                            total return;
-                        }
-
-                        else if (oper == '/')
-                        {
-                            total = a / b;
-                            Console.WriteLine("Деление " + a + " на " + b + " равно " + total);
-                            total return;
-                        
+                }
+                return (a / b);
                 try
                 {
+
+
                     if (b == 0)
-                        Console.WriteLine("you cannot divide by zero ");
+                    {
+                        Console.WriteLine("Вы не можете делить на ноль ");
+
+                        return 1;
+                    }
                     else
-                        Console.WriteLine("Result:" + " " + a / b);
+                        Console.WriteLine("Результат :" + " " + a / b);
+
                 }
                 catch
                 {
-                    Console.WriteLine("Возникло исключение!");
+                    Console.WriteLine("Неправильный ввод");
                 }
+
+
             }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Неизвестный оператор.");
-                            total 1;
-                        }
-        total 0;
-            
+
+            return 0;
         }
+        static public void Main()
+        {
+            double a = 0;
+            double b = 0;
+
+
+
+            Console.WriteLine("Введите число 1");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите число 2");
+            b = Convert.ToDouble(Console.ReadLine());
+            double res = CalculatorChecker.ValidateCalculator(a, b, "*");
+            Console.WriteLine("res" + res);
+        }
+
     }
 }
