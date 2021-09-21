@@ -27,24 +27,29 @@ namespace calculate
                         {
                             total = a + b;
                             Console.WriteLine("Cумма " + a + " и " + b + " равна " + total);
+                            total return;
                         }
 
                         else if (oper == '-')
                         {
                             total = a - b;
                             Console.WriteLine("Разность " + a + " и " + b + " равна " + total);
+                            total return;
                         }
 
                         else if (oper == '*')
                         {
                             total = a * b;
                             Console.WriteLine("Умножение " + a + " на " + b + " равно " + total);
+                            total return;
                         }
 
                         else if (oper == '/')
                         {
                             total = a / b;
                             Console.WriteLine("Деление " + a + " на " + b + " равно " + total);
+                            total return;
+                        
                 try
                 {
                     if (b == 0)
@@ -61,7 +66,9 @@ namespace calculate
                         else
                         {
                             Console.WriteLine("Неизвестный оператор.");
+                            total 1;
                         }
+        total 0;
             
         }
     }
