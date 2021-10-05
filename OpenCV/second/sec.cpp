@@ -14,15 +14,26 @@ int main()
 
 {
 	setlocale(LC_ALL, "Russian");
-	char filename[80];//a666a.jpg
+	string filename;//a666a.png
 	cout <<"введите имя файла"<<endl;
-	cin.getline(filename, 80);
-	cout << "Открыт файл";
-	cout << filename << endl;
-	Mat img = imread(filename, 1);
-	const char* source_window = "Исходное изображение";
-	namedWindow(source_window, WINDOW_AUTOSIZE);
-	imshow(source_window, img);
-	waitKey(0);
-	return(0);
+	cin >> filename;
+	
+		
+	while (filename != "a666a.png")
+	{
+			cout << "Попробуй занаво" << endl;
+			cin >> filename;
+	}
+		
+		
+			cout << "Открыт файл ";
+			cout << filename << endl;
+			Mat img = imread(filename, 1);
+			const char* source_window = "Исходное изображение";
+			namedWindow(source_window, WINDOW_AUTOSIZE);
+			imshow(source_window, img);
+		
+	
+		waitKey(0);
+		return(0);
 }
