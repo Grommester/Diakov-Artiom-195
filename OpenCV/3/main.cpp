@@ -68,7 +68,7 @@ for (int i = 0; i < contours.size(); i++)
 }
 for(int i=0;i<contours.size();i++)
 {
-	printf("Контур № %d: центр мас - x= %2f y=%2f; длина-%2f /n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));
+	printf("Контур № %d: центр мас - x= %2f y=%2f; длина-%2f /n", i, mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true)); //размеры контуров
 }
 Mat drawing = Mat::zeros(canny_output.size(), CV_8UC3); 
 for (int i = 0; i <contours.size(); i++)
@@ -80,7 +80,7 @@ for (int i = 0; i <contours.size(); i++)
 
 }
 namedWindow("Контуры", WINDOW_AUTOSIZE);
-imwrite("белоёлтый.jpg", drawing);
+imwrite("белоёлтый.jpg", drawing);//сохранение картинки
 imshow("Контуры", drawing);
 		waitKey(0);
 		return(0);
