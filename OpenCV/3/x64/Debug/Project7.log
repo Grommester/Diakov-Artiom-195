@@ -1,0 +1,12 @@
+﻿  Source.cpp
+C:\Users\Администратор\source\repos\Project7\Project7\Source.cpp(65,51): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=float
+          ]
+C:\Users\Администратор\source\repos\Project7\Project7\Source.cpp(65,28): warning C4244: аргумент: преобразование "double" в "_Tp", возможна потеря данных
+          with
+          [
+              _Tp=float
+          ]
+  Project7.vcxproj -> C:\Users\Администратор\source\repos\Project7\x64\Debug\Project7.exe
