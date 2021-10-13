@@ -77,6 +77,10 @@ int main()
 	for (int i = 0; i < contours.size(); i++)
 
 	{
+		cvtColor(img, src_gray, COLOR_RGB2GRAY);// в серый
+		imwrite("cvtColor.jpg", src_gray);
+		blur(src_gray, src_gray, Size(10, 10));// в размытый серый
+		imwrite("blur.jpg", src_gray);
 		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(200, 255), rng.uniform(200, 255)); //диапазон цветов контура
 		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, Point());
 		circle(drawing, mc[i], 4, color, -1, 5, 0);
