@@ -1,3 +1,5 @@
+Цель: Научиться работать с open CV
+	Научиться работать с Git Bush
 OpenCV - Open Source Computer Vision Library
 библиотека постоянно обновляется, и добовляется пользователями
 Позволяет:
@@ -29,7 +31,8 @@ OpenCV - Open Source Computer Vision Library
 вывести контуры drowConturs()
 для этого найти координаты центра масс
 сохранить
-
+токен
+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
 
 Теория про оператор Canny
 1 преобразование в чёрно-белый rgb2gray
